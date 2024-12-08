@@ -1,0 +1,38 @@
+<section class="hero">
+  <h1>Bienvenue sur Food Delivery</h1>
+  <p>Livraison rapide depuis vos restaurants préférés</p>
+</section>
+
+<div class="search-container">
+  <input
+    type="text"
+    placeholder="Rechercher un restaurant..."
+    [(ngModel)]="searchQuery"
+    class="search-input"
+  />
+  <button (click)="onSearch()" class="search-button">Rechercher</button>
+</div>
+
+<section class="restaurants">
+  <h2>Restaurants Populaires</h2>
+  <div class="restaurants-list">
+    <div class="restaurant-card" *ngFor="let restaurant of filteredRestaurants">
+      <img [src]="restaurant.image" alt="{{ restaurant.name }}" />
+      <div class="restaurant-details">
+        <h3>{{ restaurant.name }}</h3>
+        <p>{{ restaurant.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="food-gallery">
+  <h2>Galerie de plats</h2>
+  <ul class="food-list">
+    <li *ngFor="let food of foods" class="food-item">
+      <a>
+        <img [src]="food" alt="Food image" class="food-image" />
+      </a>
+    </li>
+  </ul>
+</section>

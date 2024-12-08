@@ -1,0 +1,27 @@
+.food-gallery {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .food-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .food-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px;
+  }
+  
+  .food-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
